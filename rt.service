@@ -1,0 +1,13 @@
+[Unit]
+Description=Servico que verifica se o sistema esta conectado na internet.
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/home/pedro/Documentos/rentbrella/rt_verifica_conexao
+
+[Install]
+WantedBy=multi-user.target
